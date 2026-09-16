@@ -1,0 +1,40 @@
+# Create a file with spaces
+touch "my important file.txt"
+
+# WRONG - tries to delete "my", "important", and "file.txt"
+file="my important file.txt"
+rm $file
+# BREAKS!
+
+# CORRECT - deletes the single file
+rm "$file"
+
+-----------------------
+
+Example:
+hunter in 🌐 ubuntu in lab/Bash on  main [?]
+➜ touch "my important file.txt"
+
+hunter in 🌐 ubuntu in lab/Bash on  main [?]
+➜ ls
+'my important file.txt'   notes
+
+hunter in 🌐 ubuntu in lab/Bash on  main [?]
+➜ file="my important file.txt"
+
+hunter in 🌐 ubuntu in lab/Bash on  main [?]
+➜ echo ${file}
+my important file.txt
+
+hunter in 🌐 ubuntu in lab/Bash on  main [?]
+➜ rm $file
+rm: cannot remove 'my': No such file or directory
+rm: cannot remove 'important': No such file or directory
+rm: cannot remove 'file.txt': No such file or directory
+
+hunter in 🌐 ubuntu in lab/Bash on  main [?]
+❯ rm "$file"
+
+hunter in 🌐 ubuntu in lab/Bash on  main [?]
+➜ ls
+notes
