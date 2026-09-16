@@ -71,3 +71,39 @@ hunter in 🌐 ubuntu in lab/Bash on  main
 
 Current directory is /home/hunter/Projects/lab/Bash
 Current branch is main
+
+
+
+-----
+
+Special variables
+
+There are special characters that take the various parts of a script.
+
+```sp_var
+
+#!/bin/bash
+echo "Script name: $0"
+echo "First argument: $1"
+echo "All arguments: $@"
+echo "Number of arguments: $#"
+
+```
+
+Example:
+
+hunter in 🌐 ubuntu in lab/Bash on  main [⇡]
+➜ vim sp_var
+
+hunter in 🌐 ubuntu in lab/Bash on  main [?⇡] took 1m12s
+➜ ./sp_var hello world
+-bash: ./sp_var: Permission denied
+
+hunter in 🌐 ubuntu in lab/Bash on  main [?⇡]
+➜ ./sp_var hello world
+Script name: ./sp_var
+First argument: hello
+All arguments: hello world
+Number of arguments: 2
+
+hunter in 🌐 ubuntu in lab/Bash on  main [?⇡]
