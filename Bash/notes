@@ -38,3 +38,36 @@ hunter in 🌐 ubuntu in lab/Bash on  main [?]
 hunter in 🌐 ubuntu in lab/Bash on  main [?]
 ➜ ls
 notes
+
+
+-----
+
+Command Substitutions
+
+Command outputs can be captured into variables.
+
+
+Example:
+
+hunter in 🌐 ubuntu in lab/Bash on  main
+➜ today=$(date +%Y-%m-%d)
+
+hunter in 🌐 ubuntu in lab/Bash on  main
+➜ echo "today is $today"
+today is 2026-09-16
+
+hunter in 🌐 ubuntu in lab/Bash on  main
+➜ echo "today is "$today""
+today is 2026-09-16
+
+hunter in 🌐 ubuntu in lab/Bash on  main
+➜ current_dir=$(pwd)
+
+hunter in 🌐 ubuntu in lab/Bash on  main
+➜ branch=$(git branch --show-current)
+
+hunter in 🌐 ubuntu in lab/Bash on  main
+➜ echo "Current directory is ${current_dir}" && echo "Current branch is ${branch}"
+
+Current directory is /home/hunter/Projects/lab/Bash
+Current branch is main
