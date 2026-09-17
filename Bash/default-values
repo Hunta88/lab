@@ -1,0 +1,5 @@
+#!/bin/bash
+name="${1:-world}" #Defaults to 'world' if 1st argument is missing
+log_level="${LOG_LEVEL:-info}" # We are not assigning any value to log_levels, so this will default to 'info'
+echo "Hello, $name (log: $log_level)"
+
