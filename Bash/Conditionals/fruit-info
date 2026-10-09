@@ -1,0 +1,26 @@
+#!/bin/bash
+
+
+if [[ $# -ne 1 ]];then
+	echo "Usage: $0 <fruit>" >&2
+	exit 1
+fi
+
+
+
+
+case $1 in
+	apple)
+		echo "$1s can be red or green"
+		;;
+	banana)
+		echo "$1s are yellow"
+		;;
+	kiwi)
+		echo "$1s are brown outside and green inside"
+		;;
+	*)
+		echo "Usage: $0 <fruit>"
+		exit 1
+		;;
+esac
